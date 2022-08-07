@@ -82,6 +82,14 @@
 		
 		
 		<p>Cours de Bryan: <a href="TD1.html">par là</a>. </p>
+		
+		<h2>Scraping</h2>
+		Pour scraper avec R, il faut les librairies rvest et dplyr.</br>
+		Les commandes seront par exemple:</br>
+page <- read_html("https://www.amazon.com") </br>
+titles <- page %>% html_nodes(".a-cardui-header") %>% html_text() </br>
+
+Le . dans le html_nodes signifie une class dans un selecteur CSS
 		<footer>
 			<p>©Copyright 2017 by Neilujman. All rights reversed.</p>
 		</footer>
