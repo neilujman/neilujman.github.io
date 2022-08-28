@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<style>
 			body {
-				font-family: cursive;
+				font-family: serif;
 				
 			}
 			h1 {
@@ -15,11 +15,27 @@
 				border-radius: 10px;
 				padding: 3px 10px;
 			}
+			h2 {
+				border: 2px solid rgba(200,0,0,0.6);
+				background: rgba(200,0,0,0.3);
+				color: rgba(200,0,0,0.6);
+				box-shadow: 1px 1px 2px rgba(200,0,0,0.4);
+				border-radius: 10px;
+				padding: 3px 10px;
+			}
+			p {
+				width: 50%;
+				<!-- margin: 25%; -->
+				text-align: justify;
+				text-justify: inter-word;
+			}
 		</style>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		
 	</head>
 	
 	<body>
-		<h1>Les statistiques</h1>
 				
 		<nav>
 			<ul>
@@ -96,6 +112,8 @@
 			</form> -->
 		</nav>
 
+		<h1>L'art de la Statistique</h1>
+		<h2>Ce que c'est</h2>
 		<p>Les statistiques sont les sciences concernant les données.</p>
 		<p>Elles recouvrent plusieurs aspects: 
 			<ul>
@@ -104,14 +122,23 @@
 				<li>l'émergence d'un modèle</li>
 			</ul>
 		</p>
-	
-		<h2>Scraping</h2>
-		Pour scraper avec R, il faut les librairies rvest et dplyr.</br>
-		Les commandes seront par exemple:</br>
-page <- read_html("https://www.amazon.com") </br>
-titles <- page %>% html_nodes(".a-cardui-header") %>% html_text() </br>
 
-Le . dans le html_nodes signifie une class dans un selecteur CSS
+		<h2>Le formalisme</h2>
+		<p>
+			On travaille souvent avec un échantillon tiré d'une population entière.
+			Mathématiquement, on dira que l'on considère une famille finie de variables indépendantes et identiquement distribuées (iid).
+			On aura donc \( \left( X_i \right)_{i=1}^N \) où \(N\) est la taille de l'échantillon et \(X_i:\Omega \rightarrow \mathbb{R} \) une application mesurable.
+			Remarquons que nous regardons la variable d'intérêt rattachée à l'individu (par exemple la taille d'une personne) et non l'individu lui-même. 
+		</p>
+		<h2>Scraping</h2>
+		<p>
+			Pour scraper avec R, il faut les librairies rvest et dplyr.</br>
+			Les commandes seront par exemple:</br>
+			page <- read_html("https://www.amazon.com") </br>
+			titles <- page %>% html_nodes(".a-cardui-header") %>% html_text() </br>
+
+			Le . dans le html_nodes signifie une class dans un selecteur CSS
+		</p>
 	</body>
 
 </html>
