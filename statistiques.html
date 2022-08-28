@@ -134,10 +134,10 @@
 		<p>
 			Pour scraper avec R, il faut les librairies rvest et dplyr.</br>
 			Les commandes seront par exemple:</br>
-			page <- read_html("https://www.amazon.com") </br>
-			titles <- page %>% html_nodes(".a-cardui-header") %>% html_text() </br>
+			<code>page <- read_html("https://www.amazon.com")</code> </br>
+			<code>titles <- page %>% html_nodes(".a-cardui-header") %>% html_text()</code> </br>
 
-			Le . dans le html_nodes signifie une class dans un selecteur CSS
+			Le <code>.</code> dans le <code>html_nodes</code> signifie une classe dans un selecteur CSS
 		</p>
 	</body>
 
