@@ -124,11 +124,18 @@
 		</p>
 
 		<h2>Le formalisme</h2>
+		<h3>Échantillonnage</h3>
 		<p>
 			On travaille souvent avec un échantillon tiré d'une population entière.
 			Mathématiquement, on dira que l'on considère une famille finie de variables indépendantes et identiquement distribuées (iid).
 			On aura donc \( \left( X_i \right)_{i=1}^N \) où \(N\) est la taille de l'échantillon et \(X_i:\Omega \rightarrow \mathbb{R} \) une application mesurable.
 			Remarquons que nous regardons la variable d'intérêt rattachée à l'individu (par exemple la taille d'une personne) et non l'individu lui-même. 
+		</p>
+		<h4>Exemple</h4>
+		<p>
+			Nous souhaitons estimer la taille moyenne de la population de la France à partir d'un échantillon de \(10000\) personnes.
+			Nous associons à chaque individu de la France une taille avec la variable aléatoire \(X:\Omega\rightarrow\left]0,3\right]\).
+			Nous avons alors comme échantillon \(x_1,\ldots,x_{10000}\) qui est la réalisation de \(X_1,\ldots,X_{10000}\).
 		</p>
 		<h2>Scraping</h2>
 		<p>
